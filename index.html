@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html>
+  <head lang="en-us">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Youtube page clone</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/style.css">
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+          <div class="menu">
+            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                width="11" height="11"
+                viewBox="0 0 172 172"
+                style=" fill:#000000;">
+                <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal">
+                <path d="M0,172v-172h172v172z" fill="none">
+                </path>
+                <g fill="#cccccc">
+                <path d="M0,14.33333v14.33333h172v-14.33333zM0,78.83333v14.33333h172v-14.33333zM0,143.33333v14.33333h172v-14.33333z">
+                </path>
+                </g>
+                </g>
+                </svg>
+          </div>
+          <div class="logo">
+              <img src="asset/yt-logo.png" alt="Logo" class="logo-img">
+          </div>
+          <div class="search-bar">
+              <input type="text" placeholder="Search"> 
+              <button class="search-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                width="13" height="13"
+                viewBox="0 0 172 172"
+                style=" fill:#000000;">
+                <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal">
+                    <path d="M0,172v-172h172v172z" fill="none">
+                    </path>
+                    <g fill="#cccccc">
+                        <path d="M95.04232,106.54818l17.77669,17.77669c-2.7155,5.17904 -2.99544,10.33008 -0.13998,13.18555l32.44597,32.44597c4.08724,4.08724 12.98958,1.84765 19.82031,-5.01107c6.85872,-6.85872 9.09831,-15.73307 5.01107,-19.82031l-32.41797,-32.44597c-2.88346,-2.85547 -8.0345,-2.57552 -13.21354,0.11198l-17.77669,-17.74869zM60.91667,0c-33.64974,0 -60.91667,27.26693 -60.91667,60.91667c0,33.64974 27.26693,60.91667 60.91667,60.91667c33.64974,0 60.91667,-27.26692 60.91667,-60.91667c0,-33.64974 -27.26692,-60.91667 -60.91667,-60.91667zM60.91667,107.5c-25.72722,0 -46.58333,-20.85612 -46.58333,-46.58333c0,-25.72722 20.85612,-46.58333 46.58333,-46.58333c25.72722,0 46.58333,20.85612 46.58333,46.58333c0,25.72722 -20.85612,46.58333 -46.58333,46.58333z">
+                        </path>
+                        </g>
+                    </g>
+                </svg>
+            </button>
+          </div> 
+          
+          <div class="upload">
+            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+            width="18" height="18"
+            viewBox="0 0 172 172"
+            style=" fill:#000000;">
+            <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal">
+                <path d="M0,172v-172h172v172z" fill="none">
+                </path>
+                <g id="original-icon" fill="#cccccc">
+                    <path d="M86,3.58333l-39.41667,53.75h25.08333v64.5h28.66667v-64.5h25.08333zM0,157.66667v14.33333h172v-14.33333z">
+                </path>
+                </g>
+                </g>
+                </svg>
+          </div>
+          <div class="sign-in">
+              <button class="sign-in-button">Sign in</button>
+          </div>
+      </header>
+
+      <section class="message">
+        <div class="language-selection">
+            <div class="icon-text">
+                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                    width="18" height="18"
+                    viewBox="0 0 172 172"
+                    style=" fill:#000000;">
+                    <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal">
+                        <path d="M0,172v-172h172v172z" fill="none" stroke="none">
+                        </path>
+                        <g id="original-icon" fill="#ffffff" stroke="none" opacity="0" visibility="hidden"><path d="M103.2,108.93333v-11.46667c2.58,-1.27853 9.9588,-10.062 10.7328,-16.9248c2.0296,-0.1548 5.21733,-2.01813 6.1576,-9.374c0.50453,-3.95027 -1.50213,-6.16907 -2.7176,-6.86853c0,0 3.0272,-5.75053 3.0272,-12.6936c0,-13.92053 -5.46387,-25.8 -17.2,-25.8c0,0 -4.0764,-8.6 -17.2,-8.6c-24.3208,0 -34.4,15.6004 -34.4,34.4c0,6.3296 3.0272,12.6936 3.0272,12.6936c-1.21547,0.69947 -3.22213,2.924 -2.7176,6.86853c0.94027,7.35587 4.128,9.2192 6.1576,9.374c0.774,6.8628 8.1528,15.64627 10.7328,16.9248v11.46667c-5.73333,17.2 -51.6,5.73333 -51.6,45.86667h137.6c0,-40.13333 -45.86667,-28.66667 -51.6,-45.86667z"></path>
+                        </g>
+                        <g id="subtracted-icon" fill="#ffffff" stroke="none">
+                            <path d="M17.2,154.8c0,-40.13333 45.86667,-28.66667 51.6,-45.86667v-11.46667c-2.58,-1.27853 -9.9588,-10.062 -10.7328,-16.9248c-2.0296,-0.1548 -5.21733,-2.01813 -6.1576,-9.374c-0.50453,-3.94453 1.50213,-6.16907 2.7176,-6.86853c0,0 -3.0272,-6.364 -3.0272,-12.6936c0,-18.7996 10.0792,-34.4 34.4,-34.4c13.1236,0 17.2,8.6 17.2,8.6c11.73613,0 17.2,11.87947 17.2,25.8c0,6.94307 -3.0272,12.6936 -3.0272,12.6936c1.21547,0.69947 3.22213,2.91827 2.7176,6.86853c-0.94027,7.35587 -4.128,9.2192 -6.1576,9.374c-0.1172,1.0392 -0.38585,2.12244 -0.76635,3.21699c-3.52682,1.3717 -6.86542,3.12002 -9.96645,5.19556c-13.82914,9.25598 -22.93333,25.01981 -22.93333,42.91224c0,8.23818 1.93003,16.02511 5.36265,22.93333z"></path>
+                        </g>
+                        <g stroke="none">
+                            <g id="Layer_1" fill="#ffffff">
+                                <path d="M131.86667,91.73333c-22.16507,0 -40.13333,17.96827 -40.13333,40.13333c0,22.16507 17.96827,40.13333 40.13333,40.13333c22.16507,0 40.13333,-17.96827 40.13333,-40.13333c0,-22.16507 -17.96827,-40.13333 -40.13333,-40.13333zM131.86667,160.53333c-3.1648,0 -5.73333,-2.56853 -5.73333,-5.73333c0,-3.1648 2.56853,-5.73333 5.73333,-5.73333c3.1648,0 5.73333,2.56853 5.73333,5.73333c0,3.1648 -2.56853,5.73333 -5.73333,5.73333zM140.0424,132.8528c-2.62013,2.41947 -4.21973,4.00187 -4.21973,5.934h-7.912c0,-5.49253 3.7496,-8.95547 6.76533,-11.74187c3.15907,-2.91827 5.09693,-4.8676 5.09693,-8.02667c0,-4.35733 -3.54893,-7.90627 -7.90627,-7.90627c-4.35733,0 -7.90627,3.5432 -7.90627,7.90627h-7.912c0,-8.72613 7.09787,-15.81827 15.81827,-15.81827c8.7204,0 15.81827,7.09213 15.81827,15.81827c0,6.7768 -4.23693,10.68693 -7.64253,13.83453z"></path>
+                            </g>
+                            <g id="Layer_1" fill="#000000" opacity="0">
+                                <path d="M131.86667,80.26667c-28.5004,0 -51.6,23.0996 -51.6,51.6c0,28.5004 23.0996,51.6 51.6,51.6c28.5004,0 51.6,-23.0996 51.6,-51.6c0,-28.5004 -23.0996,-51.6 -51.6,-51.6z"></path>
+                            </g>
+                        </g>
+                        <path d="M91.73333,172v-80.26667h80.26667v80.26667z" id="overlay-drag" fill="#ff0000" stroke="none" opacity="0">
+                    </path>
+                    </g>
+                </svg>
+                <h4>Choose your language.</h4>
+            </div>
+            <p>X</p>
+            
+        </div>
+        <div class="language-description">
+            <p>You're viewing YouTube in <strong>English (US).</strong> You can <span class="blue">change this preference below</span></p>
+            <p class="more">Learn more</p>
+        </div>
+      </section>
+
+
+      <main>
+          <section class="video-player">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/V74l_zS1x8E" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+            </iframe>
+
+            <div class="info">
+                <h1>Contributing to Open Source Part I: The Easy Way</h1>
+                <div class="first-block">
+                    <div class="">
+                        <div class="author">
+                            <div class="thumbnail">
+                                <p>T</p>
+                            </div>
+                            <div class="subscribe">
+                                <h3>The Odin Project</h3>
+                                <div class="subscribe-icon">
+                                    <img src="./asset/subscribe.png" alt="subscribe">
+                                    <label>799</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="views">
+                        <p>50,016 views</p>
+                    </div>
+                </div>
+                <div class="lines">
+                    <hr class="longline" />
+                    <hr class="shortline" />
+                </div>
+                <div class="icon-options">
+                    <div class="left-icons">
+                        <div class="plus-icon icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                                width="18" height="18"
+                                viewBox="0 0 172 172"
+                                style=" fill:#000000;">
+                                <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal">
+                                <path d="M0,172v-172h172v172z" fill="none"></path>
+                                <g fill="#7f7f7f">
+                                    <path d="M85.83203,17.04323c-6.32845,0.09274 -11.38527,5.2949 -11.2987,11.62344v45.86667h-45.86667c-4.13529,-0.05848 -7.98173,2.11417 -10.06645,5.68601c-2.08471,3.57184 -2.08471,7.98948 0,11.56132c2.08471,3.57184 5.93115,5.74449 10.06645,5.68601h45.86667v45.86667c-0.05848,4.13529 2.11417,7.98173 5.68601,10.06645c3.57184,2.08471 7.98948,2.08471 11.56132,0c3.57184,-2.08471 5.74449,-5.93115 5.68601,-10.06645v-45.86667h45.86667c4.13529,0.05848 7.98173,-2.11417 10.06645,-5.68601c2.08471,-3.57184 2.08471,-7.98948 0,-11.56132c-2.08471,-3.57184 -5.93115,-5.74449 -10.06645,-5.68601h-45.86667v-45.86667c0.04237,-3.09747 -1.17017,-6.08033 -3.36168,-8.26973c-2.1915,-2.18939 -5.17553,-3.39907 -8.27296,-3.35371z"></path>
+                                </g>
+                                </g>
+                            </svg>
+                            <label>Add to</label>
+                        </div>
+                        <div class="share-icon icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                                width="18" height="18"
+                                viewBox="0 0 172 172"
+                                style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal">
+                                    <path d="M0,172v-172h172v172z" fill="none"></path>
+                                    <g fill="#7f7f7f">
+                                        <path d="M100.33333,57.33333c-71.66667,0 -78.83333,86 -78.83333,86c0,0 14.33333,-35.83333 78.83333,-35.83333v28.66667l57.33333,-55.126l-57.33333,-52.374z"></path>
+                                    </g>
+                                </g>
+                            </svg>
+                            <label>Share</label>
+                        </div>
+                        <div class="more-icon icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                                width="15" height="15"
+                                viewBox="0 0 172 172"
+                                style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal">
+                                    <path d="M0,172v-172h172v172z" fill="none"></path>
+                                    <g fill="#7f7f7f">
+                                        <path d="M21.5,64.5c-11.86979,0 -21.5,9.63021 -21.5,21.5c0,11.86979 9.63021,21.5 21.5,21.5c11.86979,0 21.5,-9.63021 21.5,-21.5c0,-11.86979 -9.63021,-21.5 -21.5,-21.5zM86,64.5c-11.86979,0 -21.5,9.63021 -21.5,21.5c0,11.86979 9.63021,21.5 21.5,21.5c11.86979,0 21.5,-9.63021 21.5,-21.5c0,-11.86979 -9.63021,-21.5 -21.5,-21.5zM150.5,64.5c-11.86979,0 -21.5,9.63021 -21.5,21.5c0,11.86979 9.63021,21.5 21.5,21.5c11.86979,0 21.5,-9.63021 21.5,-21.5c0,-11.86979 -9.63021,-21.5 -21.5,-21.5z"></path>
+                                    </g>
+                                </g>
+                            </svg>
+                            <label>More</label>
+
+                        </div>
+                    </div>
+                    <div class="right-icons">
+                        <div class="like icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                                width="18" height="18"
+                                viewBox="0 0 172 172"
+                                style=" fill:#000000;">
+                                <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal">
+                                    <path d="M0,172v-172h172v172z" fill="none"></path>
+                                    <g fill="#7f7f7f">
+                                        <path d="M78.83333,14.33333l-5.55697,24.49544l-19.42838,21.58398c-2.37217,2.63017 -3.68132,6.04788 -3.68132,9.58822v66.16569c0,7.91917 6.41417,14.33333 14.33333,14.33333h57.55729c5.3105,0 10.11855,-3.12668 12.27572,-7.97851l21.514,-48.417c1.19683,-2.68033 1.81966,-5.58608 1.81966,-8.52441v-6.74674c0,-7.88333 -6.45,-14.33333 -14.33333,-14.33333h-50.16667c0,0 7.16667,-16.99015 7.16667,-29.64648c0,-19.651 -21.5,-20.52018 -21.5,-20.52018zM14.33333,64.5v86h21.5v-86z"></path>
+                                    </g>
+                                </g>
+                            </svg>
+                            <label>359</label>
+                        </div>
+                        <div class="dislike icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                                width="18" height="18"
+                                viewBox="0 0 172 172"
+                                style=" fill:#000000;">
+                                <g transform="">
+                                    <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal">
+                                        <path d="M0,172v-172h172v172z" fill="none"></path><g id="original-icon" fill="#7f7f7f">
+                                            <path d="M14.33333,14.33333c-3.956,0 -7.16667,3.21067 -7.16667,7.16667v71.66667c0,3.956 3.21067,7.16667 7.16667,7.16667h14.33333c3.956,0 7.16667,-3.21067 7.16667,-7.16667v-71.66667c0,-3.956 -3.21067,-7.16667 -7.16667,-7.16667zM64.5,14.33333c-7.91917,0 -14.33333,6.41417 -14.33333,14.33333v71.61068c0,3.79833 1.50489,7.43261 4.18522,10.12011l39.62663,39.71061c4.17817,4.18533 10.94518,4.21232 15.15918,0.06999c2.63017,-2.58717 3.75578,-6.35415 2.96744,-9.96615l-7.12467,-32.71191h45.51953c7.91917,0 14.33333,-6.41417 14.33333,-14.33333v-14.31934c0,-1.94217 -0.39495,-3.87044 -1.16178,-5.65494l-21.55599,-50.18067c-2.2575,-5.2675 -7.44538,-8.67839 -13.17155,-8.67839z"></path>
+                                        </g>
+                                    </g>
+                                </g>
+                            </svg>
+                            <label>14</label>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+                
+              <div class="description">
+                  <h2>Published on Feb 27, 2014</h2>
+                  <p>How do you contribute to open source? In this video, I'll describe the easiest way to make a simple contribution to an open source project -- without using the command line, a text editor, "forking a repo", or even touching Git outside of Github. I'll also describe what kinds of contributions open source software projects are typically looking for. As an example, I use submitting a student solution to a web development exercise from The Odin Project, a free online curriculum for learning web development with Ruby on Rails. You can find more information about that project at http://theodinproject.com.</p>
+                  <hr />
+                  <p class="show-more">SHOW MORE</p>
+                </div>
+              <div class="comments">
+                  <img src="./asset/5.gif" alt="" />
+                  <p>Loading</p>
+              </div>
+          </section>
+
+          <aside class="side-bar">  
+              <div class="first-title">
+                  <p>Up next</p>
+                  <div class="right-part">
+                      <p>Autoplay</p>
+                      <div class="info-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                            width="15" height="15"
+                            viewBox="0 0 172 172"
+                            style=" fill:#000000;">
+                            <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal">
+                                <path d="M0,172v-172h172v172z" fill="none"></path>
+                                <g fill="#7f7f7f">
+                                    <path d="M86,17.2c-37.9948,0 -68.8,30.8052 -68.8,68.8c0,37.9948 30.8052,68.8 68.8,68.8c37.9948,0 68.8,-30.8052 68.8,-68.8c0,-37.9948 -30.8052,-68.8 -68.8,-68.8zM91.73333,120.4h-11.46667v-40.13333h11.46667zM86,65.93333c-4.7472,0 -8.6,-3.8528 -8.6,-8.6c0,-4.7472 3.8528,-8.6 8.6,-8.6c4.7472,0 8.6,3.8528 8.6,8.6c0,4.7472 -3.8528,8.6 -8.6,8.6z"></path>
+                                </g>
+                            </g>
+                        </svg>
+                      </div>
+                      <div class="toggle-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                            width="25" height="25"
+                            viewBox="0 0 172 172"
+                            style=" fill:#000000;">
+                            <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal">
+                                <path d="M0,172v-172h172v172z" fill="none"></path>
+                                <g>
+                                    <path d="M47.3,131.15c-24.897,0 -45.15,-20.253 -45.15,-45.15c0,-24.897 20.253,-45.15 45.15,-45.15h77.4c24.897,0 45.15,20.253 45.15,45.15c0,24.897 -20.253,45.15 -45.15,45.15z" fill="#267ac6"></path>
+                                    <path d="M124.7,43c23.7102,0 43,19.2898 43,43c0,23.7102 -19.2898,43 -43,43h-77.4c-23.7102,0 -43,-19.2898 -43,-43c0,-23.7102 19.2898,-43 43,-43h77.4M124.7,38.7h-77.4c-26.1225,0 -47.3,21.1775 -47.3,47.3v0c0,26.1225 21.1775,47.3 47.3,47.3h77.4c26.1225,0 47.3,-21.1775 47.3,-47.3v0c0,-26.1225 -21.1775,-47.3 -47.3,-47.3z" fill="#4e7ab5"></path>
+                                    <path d="M124.7,120.4v0c18.9974,0 34.4,-15.4026 34.4,-34.4v0c0,-18.9974 -15.4026,-34.4 -34.4,-34.4v0c-18.9974,0 -34.4,15.4026 -34.4,34.4v0c0,18.9974 15.4026,34.4 34.4,34.4z" fill="#ffffff"></path>
+                                </g>
+                                </g>
+                        </svg>
+                      </div>
+                  </div>
+              </div>
+              <div class="videos">
+                  <div class="video">
+                      <img src="asset/video-1.jpeg" alt="" />
+                      <div class="text">
+                          <h3>Contributing to Open Source Part II: The Real Way</h3>
+                          <p class="name">The Odin Project</p>
+                          <p class="views">29,985 views</p>
+                      </div>
+                  </div>
+                  <hr />
+                  <div class="video">
+                    <img src="asset/video2.jpeg" alt="" />
+                    <div class="text">
+                        <h3>'How to Get a Job at the Big 4 - Amazon, Facebook, Google & Microsoft' by</h3>
+                        <p class="name">imtiana</p>
+                        <p class="views">981,543 views</p>
+                    </div>
+                  </div>
+                  <div class="video">
+                    <img src="asset/video3.jpeg" alt="" />
+                    <div class="text">
+                        <h3>Programming in Visual Basic .Net How to Connect Access Database to</h3>
+                        <p class="name">iBasskung</p>
+                        <p class="views">16,130,993 views</p>
+                    </div>
+                  </div>
+                  <div class="video">
+                    <img src="asset/video4.jpeg" alt="" />
+                    <div class="text">
+                        <h3>REST API concepts and examples</h3>
+                        <p class="name">WebConcepts</p>
+                        <p class="views">3,580,484 views</p>
+                    </div>
+                  </div>
+                  <div class="video">
+                    <img src="asset/video5.jpeg" alt="" />
+                    <div class="text">
+                        <h3>GitHub - Why Microsoft Paid $7.5B for the Future of Software! - A Case</h3>
+                        <p class="name">Valuetainment</p>
+                        <p class="views">44,634 views</p>
+                    </div>
+                  </div>
+                  <div class="video">
+                    <img src="asset/video6.jpeg" alt="" />
+                    <div class="text">
+                        <h3>How to create a 3D Terrain with Google Maps and height maps in Photoshop</h3>
+                        <p class="name">Irange Box Ceo</p>
+                        <p class="views">6,269,391 views</p>
+                    </div>
+                  </div>
+                  <div class="video">
+                    <img src="asset/video7.jpeg" alt="" />
+                    <div class="text">
+                        <h3>Convolutional Neural Networks (CNNs) explained</h3>
+                        <p class="name">deeplizard</p>
+                        <p class="views">239,752 views</p>
+                    </div>
+                  </div>
+                  <div class="video">
+                    <img src="asset/video8.jpeg" alt="" />
+                    <div class="text">
+                        <h3>Top 10 Linux Job Interview Questions</h3>
+                        <p class="name">tutorialLinux</p>
+                        <p class="views">1,236,003 views</p>
+                    </div>
+                  </div>
+                  <div class="video">
+                    <img src="asset/video9.jpeg" alt="" />
+                    <div class="text">
+                        <h3>Running an SQL Injection Attack - Computerphile</h3>
+                        <p class="name">Computerphile</p>
+                        <p class="views">2,217,477 views</p>
+                    </div>
+                  </div>
+                  <div class="video">
+                    <img src="asset/video10.jpeg" alt="" />
+                    <div class="text">
+                        <h3>How to prepare for product based companies??</h3>
+                        <p class="name">Gate Lectures by Ravindrababu Ra</p>
+                        <p class="views">291,215 views</p>
+                    </div>
+                  </div>
+                  <div class="video">
+                    <img src="asset/video11.jpeg" alt="" />
+                    <div class="text">
+                        <h3>Visual Basic .Net : Search in Access Database - DataGridView</h3>
+                        <p class="name">iBasskung</p>
+                        <p class="views">6,047,577 views</p>
+                    </div>
+                  </div>
+                  <div class="video">
+                    <img src="asset/video12.jpeg" alt="" />
+                    <div class="text">
+                        <h3>How To Convert pdf to word without software</h3>
+                        <p class="name">karim hamdadi</p>
+                        <p class="views">12,275,519 views</p>
+                    </div>
+                  </div>
+                  <div class="video">
+                    <img src="asset/video13.jpeg" alt="" />
+                    <div class="text">
+                        <h3>What Python Projects Should I Build to Get a Job?</h3>
+                        <p class="name">Real Python</p>
+                        <p class="views">169,155 views</p>
+                    </div>
+                  </div>
+                  <div class="video">
+                    <img src="asset/video14.jpeg" alt="" />
+                    <div class="text">
+                        <h3>How To NOT Look Like A Tourist | What To Wear In Europe</h3>
+                        <p class="name">Audrey Coyne</p>
+                        <p class="views">3,432,133 views</p>
+                    </div>
+                  </div>
+                  <div class="video">
+                    <img src="asset/video15.jpeg" alt="" />
+                    <div class="text">
+                        <h3>Your First GitHub Pull Request (in 10 Mins)</h3>
+                        <p class="name">Jackson Bates</p>
+                        <p class="views">31,930 views</p>
+                    </div>
+                  </div>
+                  <div class="video">
+                    <img src="asset/video16.jpeg" alt="" />
+                    <div class="text">
+                        <h3>Top signs of an inexperienced programmer</h3>
+                        <p class="name">TechLead</p>
+                        <p class="views">928,523 views</p>
+                    </div>
+                  </div>
+                  <div class="video">
+                    <img src="asset/video17.jpeg" alt="" />
+                    <div class="text">
+                        <h3>Why I left my job at Google (as a software engineer)
+                        </h3>
+                        <p class="name">TechLead</p>
+                        <p class="views">1,684,582 views</p>
+                    </div>
+                  </div>
+                  <div class="video">
+                    <img src="asset/video18.jpeg" alt="" />
+                    <div class="text">
+                        <h3>Max Stoiber - I want you to contribute to open source</h3>
+                        <p class="name">ReacRally</p>
+                        <p class="views">3,134 views</p>
+                    </div>
+                  </div>
+                  <div class="video">
+                    <img src="asset/video19.jpeg" alt="" />
+                    <div class="text">
+                        <h3>How to Learn Anything... Fast - Josh Kaufman</h3>
+                        <p class="name">The RSA</p>
+                        <p class="views">3,157,647 views</p>
+                    </div>
+                  </div>
+                  <div class="video">
+                    <img src="asset/video20.jpeg" alt="" />
+                    <div class="text">
+                        <h3>Git & GitHub: Pull requests (10/11)</h3>
+                        <p class="name">Codecourse</p>
+                        <p class="views">78,624 views</p>
+                    </div> 
+                  </div>
+                  <hr />
+                  <p class="show-more">SHOW MORE</p>
+              </div>
+          </aside>
+      </main>
+
+
+      <footer>
+          <section class="options">
+              <div class="logo">
+                <img src="asset/yt-logo.png" alt="Logo" class="logo-img">
+              </div>
+              <button class="language">
+                <svg class="icon" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                width="18" height="18"
+                viewBox="0 0 172 172"
+                style=" fill:#b61919;">
+                <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal">
+                    <path d="M0,172v-172h172v172z" fill="none" stroke="none">
+                    </path>
+                    <g id="original-icon" fill="#7C7C7C" stroke="none" opacity="0" visibility="hidden"><path d="M103.2,108.93333v-11.46667c2.58,-1.27853 9.9588,-10.062 10.7328,-16.9248c2.0296,-0.1548 5.21733,-2.01813 6.1576,-9.374c0.50453,-3.95027 -1.50213,-6.16907 -2.7176,-6.86853c0,0 3.0272,-5.75053 3.0272,-12.6936c0,-13.92053 -5.46387,-25.8 -17.2,-25.8c0,0 -4.0764,-8.6 -17.2,-8.6c-24.3208,0 -34.4,15.6004 -34.4,34.4c0,6.3296 3.0272,12.6936 3.0272,12.6936c-1.21547,0.69947 -3.22213,2.924 -2.7176,6.86853c0.94027,7.35587 4.128,9.2192 6.1576,9.374c0.774,6.8628 8.1528,15.64627 10.7328,16.9248v11.46667c-5.73333,17.2 -51.6,5.73333 -51.6,45.86667h137.6c0,-40.13333 -45.86667,-28.66667 -51.6,-45.86667z"></path>
+                    </g>
+                    <g id="subtracted-icon" fill="#7C7C7C" stroke="none">
+                        <path d="M17.2,154.8c0,-40.13333 45.86667,-28.66667 51.6,-45.86667v-11.46667c-2.58,-1.27853 -9.9588,-10.062 -10.7328,-16.9248c-2.0296,-0.1548 -5.21733,-2.01813 -6.1576,-9.374c-0.50453,-3.94453 1.50213,-6.16907 2.7176,-6.86853c0,0 -3.0272,-6.364 -3.0272,-12.6936c0,-18.7996 10.0792,-34.4 34.4,-34.4c13.1236,0 17.2,8.6 17.2,8.6c11.73613,0 17.2,11.87947 17.2,25.8c0,6.94307 -3.0272,12.6936 -3.0272,12.6936c1.21547,0.69947 3.22213,2.91827 2.7176,6.86853c-0.94027,7.35587 -4.128,9.2192 -6.1576,9.374c-0.1172,1.0392 -0.38585,2.12244 -0.76635,3.21699c-3.52682,1.3717 -6.86542,3.12002 -9.96645,5.19556c-13.82914,9.25598 -22.93333,25.01981 -22.93333,42.91224c0,8.23818 1.93003,16.02511 5.36265,22.93333z"></path>
+                    </g>
+                    <g stroke="none">
+                        <g id="Layer_1" fill="#7C7C7C">
+                            <path d="M131.86667,91.73333c-22.16507,0 -40.13333,17.96827 -40.13333,40.13333c0,22.16507 17.96827,40.13333 40.13333,40.13333c22.16507,0 40.13333,-17.96827 40.13333,-40.13333c0,-22.16507 -17.96827,-40.13333 -40.13333,-40.13333zM131.86667,160.53333c-3.1648,0 -5.73333,-2.56853 -5.73333,-5.73333c0,-3.1648 2.56853,-5.73333 5.73333,-5.73333c3.1648,0 5.73333,2.56853 5.73333,5.73333c0,3.1648 -2.56853,5.73333 -5.73333,5.73333zM140.0424,132.8528c-2.62013,2.41947 -4.21973,4.00187 -4.21973,5.934h-7.912c0,-5.49253 3.7496,-8.95547 6.76533,-11.74187c3.15907,-2.91827 5.09693,-4.8676 5.09693,-8.02667c0,-4.35733 -3.54893,-7.90627 -7.90627,-7.90627c-4.35733,0 -7.90627,3.5432 -7.90627,7.90627h-7.912c0,-8.72613 7.09787,-15.81827 15.81827,-15.81827c8.7204,0 15.81827,7.09213 15.81827,15.81827c0,6.7768 -4.23693,10.68693 -7.64253,13.83453z"></path>
+                        </g>
+                        <g id="Layer_1" fill="#7C7C7C" opacity="0">
+                            <path d="M131.86667,80.26667c-28.5004,0 -51.6,23.0996 -51.6,51.6c0,28.5004 23.0996,51.6 51.6,51.6c28.5004,0 51.6,-23.0996 51.6,-51.6c0,-28.5004 -23.0996,-51.6 -51.6,-51.6z"></path>
+                        </g>
+                    </g>
+                    <path d="M91.73333,172v-80.26667h80.26667v80.26667z" id="overlay-drag" fill="#ff0000" stroke="none" opacity="0">
+                </path>
+                </g>
+                </svg> 
+                Language: <strong>English</strong>
+                <img class="down-arrow icon" src="https://img.icons8.com/ios-filled/50/000000/sort-down.png"/>
+              </button>
+              <button class="location">
+                <span>Location: <b>Netherlands</b></span>
+                <img class="down-arrow icon" src="https://img.icons8.com/ios-filled/50/000000/sort-down.png"/>
+              </button>
+              <button class="restricted-mode">
+                <span>Restricted Mode: <b>Off</b></span>
+                <img class="down-arrow icon" src="https://img.icons8.com/ios-filled/50/000000/sort-down.png"/>
+              </button>
+              <button class="history">
+                <svg class="icon" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                    width="12" height="12"
+                    viewBox="0 0 172 172"
+                    style=" fill:#000000;">
+                    <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal">
+                        <path d="M0,172v-172h172v172z" fill="none"></path>
+                        <g fill="#7c7c7c">
+                            <path d="M34.04167,21.5c-1.93842,-0.02741 -3.74144,0.99102 -4.71865,2.66532c-0.97721,1.6743 -0.97721,3.74507 0,5.41937c0.97721,1.6743 2.78023,2.69273 4.71865,2.66532h1.79167v7.16667c0,21.2488 13.5179,39.0044 32.25,46.28939v0.58789c-18.7321,7.28498 -32.25,25.04059 -32.25,46.28939v7.16667h-1.79167c-1.93842,-0.02741 -3.74144,0.99102 -4.71865,2.66532c-0.97721,1.6743 -0.97721,3.74507 0,5.41937c0.97721,1.6743 2.78023,2.69273 4.71865,2.66532h7.16667h89.58333h7.16667c1.93842,0.02741 3.74144,-0.99102 4.71865,-2.66532c0.97721,-1.6743 0.97721,-3.74507 0,-5.41937c-0.97721,-1.6743 -2.78023,-2.69273 -4.71865,-2.66532h-1.79167v-7.16667c0,-21.2488 -13.5179,-39.0044 -32.25,-46.28939v-0.58789c18.7321,-7.28498 32.25,-25.04059 32.25,-46.28939v-7.16667h1.79167c1.93842,0.02741 3.74144,-0.99102 4.71865,-2.66532c0.97721,-1.6743 0.97721,-3.74507 0,-5.41937c-0.97721,-1.6743 -2.78023,-2.69273 -4.71865,-2.66532h-7.16667h-89.58333zM46.58333,32.25h78.83333v7.16667c0,17.98281 -12.00076,33.04718 -28.37972,37.82097c-2.29264,0.66874 -3.86919,2.76986 -3.87028,5.15804v7.20866c0.00109,2.38818 1.57764,4.4893 3.87028,5.15804c16.37896,4.77378 28.37972,19.83816 28.37972,37.82097v7.16667h-5.46598c-0.93796,-17.96278 -15.75424,-32.25 -33.95068,-32.25c-18.19645,0 -33.01272,14.28722 -33.95068,32.25h-5.46598v-7.16667c0,-17.98281 12.00076,-33.04718 28.37972,-37.82097c2.29264,-0.66874 3.86919,-2.76986 3.87028,-5.15804v-7.20866c-0.00109,-2.38818 -1.57764,-4.4893 -3.87028,-5.15804c-16.37896,-4.77378 -28.37972,-19.83816 -28.37972,-37.82097z"></path>
+                        </g>
+                    </g>
+                </svg>
+                <span>History</span>
+              </button>
+              <button class="help">
+                <svg class="icon" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                    width="12" height="12"
+                    viewBox="0 0 172 172"
+                    style=" fill:#000000;">
+                    <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal">
+                        <path d="M0,172v-172h172v172z" fill="none"></path>
+                        <g>
+                            <path d="M169.34609,86c0,-46.02344 -37.32266,-83.34609 -83.34609,-83.34609c-46.02344,0 -83.34609,37.32266 -83.34609,83.34609c0,46.02344 37.32266,83.34609 83.34609,83.34609c46.02344,0 83.34609,-37.32266 83.34609,-83.34609z" fill="#7c7c7c"></path>
+                            <path d="M49.08047,60.97266c0,-4.66953 1.51172,-9.40625 4.50156,-14.21016c2.98984,-4.80391 7.39063,-8.76797 13.13516,-11.92578c5.74453,-3.15781 12.46328,-4.73672 20.15625,-4.73672c7.12187,0 13.4375,1.31016 18.87969,3.96406c5.47578,2.62031 9.675,6.21484 12.66484,10.75c2.98984,4.53516 4.46797,9.43984 4.46797,14.74766c0,4.19922 -0.83984,7.86094 -2.55312,10.98516c-1.71328,3.15781 -3.72891,5.87891 -6.04687,8.16328c-2.35156,2.28438 -6.51719,6.14766 -12.59766,11.55625c-1.67969,1.51172 -3.02344,2.85547 -4.03125,4.03125c-1.00781,1.14219 -1.74688,2.21719 -2.25078,3.15781c-0.50391,0.97422 -0.87344,1.91484 -1.14219,2.88906c-0.26875,0.97422 -0.67187,2.65391 -1.20938,5.07266c-0.94062,5.10625 -3.86328,7.69297 -8.76797,7.69297c-2.55313,0 -4.70312,-0.83984 -6.45,-2.51953c-1.74687,-1.67969 -2.62031,-4.16563 -2.62031,-7.45781c0,-4.13203 0.63828,-7.72656 1.91484,-10.75c1.27656,-3.02344 2.98984,-5.67734 5.10625,-7.96172c2.11641,-2.28437 4.97187,-5.00547 8.56641,-8.16328c3.15781,-2.75469 5.40859,-4.8375 6.81953,-6.24844c1.41094,-1.41094 2.58672,-2.95625 3.52734,-4.70312c0.97422,-1.71328 1.44453,-3.59453 1.44453,-5.61016c0,-3.93047 -1.47812,-7.25625 -4.40078,-9.97734c-2.92266,-2.72109 -6.71875,-4.06484 -11.32109,-4.06484c-5.40859,0 -9.40625,1.37734 -11.95938,4.09844c-2.55312,2.72109 -4.73672,6.75234 -6.48359,12.06016c-1.67969,5.57656 -4.8375,8.33125 -9.50703,8.33125c-2.75469,0 -5.07266,-0.97422 -6.9875,-2.92266c-1.88125,-1.88125 -2.85547,-3.96406 -2.85547,-6.24844zM85.12656,141.86641c-2.98984,0 -5.61016,-0.97422 -7.86094,-2.92266c-2.25078,-1.94844 -3.35937,-4.66953 -3.35937,-8.16328c0,-3.09063 1.075,-5.71094 3.25859,-7.82734c2.15,-2.11641 4.8375,-3.15781 7.96172,-3.15781c3.09063,0 5.71094,1.075 7.82734,3.15781c2.11641,2.11641 3.15781,4.73672 3.15781,7.82734c0,3.46016 -1.10859,6.14766 -3.32578,8.12969c-2.21719,1.98203 -4.77031,2.95625 -7.65937,2.95625z" fill="#ffffff"></path>
+                        </g>
+                    </g>
+                </svg>
+                <span>Help</span>
+              </button>
+          </section>
+
+          <hr />
+
+          <section class="quick-links">
+              <nav class="main">
+                  <ul>
+                      <li><a href="#">About</li>
+                      <li><a href="#">Press</li>
+                      <li><a href="#">Copyright</li>
+                      <li><a href="#">Creators</li>
+                      <li><a href="#">Advertise</li>
+                      <li><a href="#">Developers</li>
+                  </ul>
+              </nav>
+
+              <nav class="secondary">
+                  <ul>
+                      <li><a href="#">Terms</li>
+                      <li><a href="#">Privacy</li>
+                      <li><a href="#">Policy & Safety</li>
+                      <li><a href="#">Test new features</li>
+                  </ul>
+              </nav>
+          </section>
+      </footer>
+    </div>
+  </body>
+</html>

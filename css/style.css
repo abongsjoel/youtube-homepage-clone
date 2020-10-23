@@ -1,0 +1,354 @@
+body {
+  background: #eee;
+  font-family: 'Roboto', sans-serif;
+}
+
+
+.container {
+  width: 70%;
+  margin: 0 auto;
+  background: #f1f1f1;
+  border: 2px solid #333;
+}
+
+header {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 10px 0;
+  background: white;
+}
+
+main {
+  display: flex;
+}
+
+.logo-img {
+  width: 100px;
+}
+
+.search-bar {
+  width: 70%;
+  display: flex;
+}
+
+.search-bar .magnifying-glass {
+  width: 15px;
+}
+
+.search-bar input {
+  width: 90%;
+  padding: 5px;
+  border: 1px solid #afaeae;
+}
+
+.search-bar .search-icon {
+  border: 1px solid #afaeae;
+  width: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #F8F8F8;
+  cursor: pointer;
+}
+
+.upload .upload-icon {
+  width: 20px;
+}
+
+.language-selection, .language-description {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+  padding: 10px;
+  background: white;
+}
+
+.language-selection {
+  background: #267ac6;
+}
+
+.language-selection .icon-text {
+  display: flex;
+  align-items: center;
+}
+
+.language-selection p {
+  font-size: 10px;
+}
+
+.message {
+  margin: 10px 0;
+  border: 2px solid #267ac6;  
+}
+
+.message h4 {
+  padding: 0 10px;
+}
+
+.language-description p {
+  color: #333;
+    font-size: 12px
+}
+
+.language-description .more {
+  color: #267ac6;
+}
+
+.language-description .blue {
+  color: #267ac6;
+}
+
+.language-description .more:hover {
+  cursor: pointer;
+}
+
+.sign-in-button {
+  background-color: #267ac6;
+  font-size: 10px;
+  border: none;
+  color: white;
+  padding: 8px;
+    
+}
+
+.video-player {
+  width: 65%;
+}
+
+.video-player iframe {
+  width: 100%;
+}
+
+.info {
+  margin: 10px 0;
+  padding: 10px;
+  background: white;
+}
+
+.info h1 {
+  font-size: 20px;
+  font-weight: 400;
+  margin: 10px 0;
+}
+
+.info .thumbnail {
+  background: #689F39;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
+}
+
+.info .thumbnail p {
+  font-size: 28px;
+  color: white;
+}
+
+.info .author {
+  display: flex;
+}
+
+.info .subscribe img {
+  width: 100px;
+}
+
+.info .subscribe h3 {
+  color: #333;
+}
+
+.info .subscribe-icon {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.info .subscribe-icon label {
+  border: 1px solid #ccc6cc;
+  padding: 4px;
+  border-left: 0;
+}
+
+.info .first-block {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  color: #7f7f7f;
+}
+
+.info .lines {
+  display: grid;
+  position: relative;
+}
+
+.info .longline {
+  border-top: #333;   
+  width: 100%; 
+}
+
+.info .shortline {
+  border-top: 1px solid #267ac6;
+  color: #267ac6;
+  position: absolute;
+  width: 150px;
+  right: 10px;      
+}
+
+.info .icon-options {
+  display: flex;
+  justify-content: space-between;
+}
+
+.info .left-icons, .info .right-icons {
+  display: flex;
+}
+
+.info .icon {
+  padding-right: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.info .icon label {
+  padding: 10px;
+  font-size: 12px;
+  color: #7f7f7f;
+}
+
+.description {
+  background: white;
+  padding: 10px;
+  padding-bottom: 0;
+  color: #7f7f7f;
+  margin-bottom: 10px;
+}
+
+.description h2 {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.description p {
+  font-size: 14px;
+  line-height: 1.2;
+  padding-bottom: 15px;
+}
+
+hr {
+  border-top: #333; 
+}
+
+.show-more {
+  text-align: center;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.comments {
+  background: white;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #7f7f7f;
+}
+
+.comments img {
+  width: 20px;
+  padding-right: 10px;
+}
+
+.side-bar {
+  width: 35%;
+  background: white;
+  padding: 10px;
+  margin-left: 10px;
+}
+
+.side-bar .first-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.side-bar .first-title .right-part {
+  display: flex;
+  align-items: center;
+}
+
+.side-bar .first-title .right-part div {
+  padding-left: 10px;
+}
+
+.side-bar .video {
+  display: flex;
+  padding: 10px 0;
+}
+
+.text h3 {
+  font-size: 14px;
+}
+
+.text .name, .views {
+  font-size: 11px;
+  color: rgb(190, 190, 190);
+  padding: 5px;
+}
+
+.video .text {
+  margin-left: 10px;
+}
+
+footer .options {
+  background: white;
+}
+
+.options .down-arrow {
+  width: 8px;
+}
+
+footer {
+  margin: 100px 0;
+  background: white;
+  padding: 20px 40px;
+}
+
+footer .options {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+footer .options button {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 5px;
+  margin-left: 15px;
+  border: 1px solid #ccc;
+}
+
+footer .options .icon {
+  margin: 0 5px;
+}
+
+footer nav a {
+  text-decoration: none;
+  color: #333;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+footer nav li {
+  display: inline-block;
+  padding: 10px;
+  font-size: 14px;
+}
+
+footer nav.secondary li {
+  font-size: 12px;
+}
