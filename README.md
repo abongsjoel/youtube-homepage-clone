@@ -2,7 +2,7 @@
 
 In this project we clone a youtube page from an archive, we edit the styling and embeded images and video.
 
-![screenshot](../featureDev/screenshot/screenshot.png) 
+![screenshot](../main/screenshot/screenshot.png) 
 
 <h2>Built with</h2>
 <ul>
