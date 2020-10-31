@@ -4,17 +4,18 @@ In this project we clone a youtube page from an archive, we edit the styling and
 
 ![screenshot](../main/screenshot/screenshot.png) 
 
-<h2>Built with</h2>
-<ul>
-  <li>HTML</li>
-  <li>CSS</li>
-</ul>
+## Built with
 
-<h2>Live demo
+  - HTML
+  - CSS
 
-</h2>
 
-<h2>Authors</h2>
+## Live demo
+
+- [Visit Page](https://abongsjoel.github.io/youtube-homepage-clone/)
+
+
+## Authors
 <p><strong>Joel Chi</strong></p>
 <ul>
   <li>Github: <a href="https://github.com/abongsjoel">@JoelChi</a>
