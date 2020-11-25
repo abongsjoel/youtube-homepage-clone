@@ -4,6 +4,8 @@ In this project we clone a youtube page from an archive, we edit the styling and
 
 ![screenshot](../main/screenshot/screenshot.png) 
 
+We used empty semantic HTML elements to enclose sections. We then used basic CSS to size and position the sections appropraitely on this page.We also embedded a youtube video into the page and built a sidebar section where previews of suggested videos show up.We then finished up by filling in the elements below the video - the title, description and number of views.
+
 ## Built with
 
   - HTML
