@@ -1,6 +1,6 @@
 # Youtube webpage clone
 
-In this project we clone a youtube page from an archive, we edit the styling and embeded images and video.
+A clone of an old youtube homepage page using plain HTML and CSS.
 
 ![screenshot](../main/screenshot/screenshot.png) 
 
